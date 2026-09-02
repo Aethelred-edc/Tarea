@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Web HTML</title>
+    <style>
+        body {
+            background-color: #eaf7f0; 
+            font-family: Arial, sans-serif;
+            color: #722F37;
+            margin: 40px;
+        }
+
+        .titulo-principal {
+            background-color: #50C878;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px; 
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .titulo-principal:hover {
+            transform: scale(1.02);
+        }
+
+        hr.separador {
+            border: none;
+            height: 6px;
+            background-color: #722F37;
+            margin: 40px 0;
+            border-radius: 3px;
+        }
+
+        hr.separador-esmeralda {
+            border: none;
+            height: 4px;
+            background-color: #50C878;
+            margin: 40px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 4px solid #722F37;
+            background-color: #ffffff;
+        }
+        th, td {
+            border: 2px solid #50C878;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #722F37;
+            color: #ffffff;
+        }
+
+        .imagen-estilizada {
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(114, 47, 55, 0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .imagen-estilizada:hover {
+            transform: scale(1.05);
+            box-shadow: 8px 8px 20px rgba(114, 47, 55, 0.8);
+        }
+
+        .formulario-contenedor {
+            background-color: #ffffff;
+            padding: 25px;
+            border: 3px solid #50C878;
+            border-radius: 15px;
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        .grupo-form {
+            margin-bottom: 15px;
+        }
+        .grupo-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .grupo-form input {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #722F37;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contenedor-botones {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        .btn {
+            padding: 10px 20px;
+            color: #ffffff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+        .btn-guardar { background-color: #50C878; color: #000; }
+        .btn-imprimir { background-color: #722F37; }
+        .btn-salir { background-color: #333333; }
+
+        .galeria {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="titulo-principal">Práctica Web HTML - 10%</h1>
+
+    <hr class="separador">
+
+    <h2>1. Tabla de Datos</h2>
+    <table>
+        <tr>
+            <th>Actividad</th>
+            <th>Descripción</th>
+            <th>Puntaje</th>
+        </tr>
+        <tr>
+            <td>Estructura y Título</td>
+            <td>Creación del esqueleto HTML y estilos del título</td>
+            <td>2%</td>
+        </tr>
+        <tr>
+            <td>Formulario y Botones</td>
+            <td>Implementación de inputs y acciones</td>
+            <td>4%</td>
+        </tr>
+        <tr>
+            <td>Galería y Animaciones</td>
+            <td>Imágenes con sombras, bordes y transiciones</td>
+            <td>4%</td>
+        </tr>
+    </table>
+
+    <hr class="separador-esmeralda">
+
+    <h2>2. Imagen Manipulada</h2>
+    <img src="https://via.placeholder.com/600x300/50C878/ffffff?text=Imagen+Manipulada+600x300" 
+         alt="Imagen de prueba" 
+         width="600" 
+         height="300" 
+         class="imagen-estilizada">
+
+    <hr class="separador">
+
+    <h2>3. Formulario de Registro</h2>
+    <div class="formulario-contenedor">
+        <form>
+            <div class="grupo-form">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" placeholder="Ej: 001">
+            </div>
+            <div class="grupo-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+            </div>
+            <div class="grupo-form">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Tu dirección">
+            </div>
+            <div class="grupo-form">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+            </div>
+            <div class="grupo-form">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="********">
+            </div>
+
+            <div class="contenedor-botones">
+                <button type="button" class="btn btn-guardar">Guardar</button>
+                <button type="button" class="btn btn-imprimir" onclick="window.print()">Imprimir</button>
+                <button type="button" class="btn btn-salir" onclick="window.close()">Salir</button>
+            </div>
+        </form>
+    </div>
+
+    <hr class="separador-esmeralda">
+
+    <h2>4. Galería de Imágenes</h2>
+    <div class="galeria">
+        <img src="https://via.placeholder.com/300x200/722F37/ffffff?text=Galeria+1" width="300" height="200" class="imagen-estilizada" alt="Galería 1">
+        <img src="https://via.placeholder.com/300x200/50C878/ffffff?text=Galeria+2" width="300" height="200" class="imagen-estilizada" alt="Galería 2">
+        <img src="https://via.placeholder.com/300x200/722F37/ffffff?text=Galeria+3" width="300" height="200" class="imagen-estilizada" alt="Galería 3">
+    </div>
+
+</body>
+</html>

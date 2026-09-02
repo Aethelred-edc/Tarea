@@ -1,209 +1,158 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica Web HTML</title>
+    <title>Practica Web 10%</title>
     <style>
         body {
-            background-color: #eaf7f0; 
-            font-family: Arial, sans-serif;
-            color: #722F37;
-            margin: 40px;
+            background-color: #eaf7f0;
+            font-family: Arial;
         }
 
-        .titulo-principal {
+        h1 {
             background-color: #50C878;
-            color: #FFFFFF;
-            padding: 20px;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 3px 3px 5px #722F37;
             text-align: center;
-            border-radius: 15px; 
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-        
-        .titulo-principal:hover {
-            transform: scale(1.02);
         }
 
-        hr.separador {
-            border: none;
-            height: 6px;
+        hr {
+            height: 5px;
             background-color: #722F37;
-            margin: 40px 0;
-            border-radius: 3px;
+            border: none;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
-        hr.separador-esmeralda {
-            border: none;
-            height: 4px;
+        .linea-verde {
+            height: 8px;
             background-color: #50C878;
-            margin: 40px 0;
         }
 
         table {
-            width: 100%;
-            border-collapse: collapse;
             border: 4px solid #722F37;
-            background-color: #ffffff;
+            background-color: white;
+            margin: auto;
         }
-        th, td {
+
+        td {
             border: 2px solid #50C878;
-            padding: 12px;
-            text-align: left;
+            padding: 10px;
         }
+
         th {
+            border: 2px solid #50C878;
             background-color: #722F37;
-            color: #ffffff;
+            color: white;
+            padding: 10px;
         }
 
-        .imagen-estilizada {
+        .animacion-imagen {
             border-radius: 20px;
-            box-shadow: 5px 5px 15px rgba(114, 47, 55, 0.5);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-        .imagen-estilizada:hover {
-            transform: scale(1.05);
-            box-shadow: 8px 8px 20px rgba(114, 47, 55, 0.8);
+            box-shadow: 5px 5px 10px gray;
+            transition: 0.5s;
+            margin: 10px;
         }
 
-        .formulario-contenedor {
-            background-color: #ffffff;
-            padding: 25px;
+        .animacion-imagen:hover {
+            transform: scale(1.1);
+        }
+
+        .mi-formulario {
+            background-color: white;
             border: 3px solid #50C878;
+            padding: 20px;
+            width: 250px;
             border-radius: 15px;
-            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
+            margin-left: 20px;
         }
-        .grupo-form {
-            margin-bottom: 15px;
-        }
-        .grupo-form label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .grupo-form input {
-            width: 100%;
-            padding: 8px;
-            border: 2px solid #722F37;
+
+        input {
+            border: 1px solid #722F37;
+            margin-bottom: 10px;
             border-radius: 5px;
-            box-sizing: border-box;
         }
 
-        .contenedor-botones {
-            margin-top: 20px;
-            display: flex;
-            gap: 15px;
-        }
-        .btn {
-            padding: 10px 20px;
-            color: #ffffff;
+        .mi-boton {
+            background-color: #722F37;
+            color: white;
             border: none;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 8px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s, transform 0.2s;
+            padding: 8px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px black;
+            transition: 0.3s;
         }
-        .btn:hover {
-            transform: translateY(-3px);
-        }
-        .btn-guardar { background-color: #50C878; color: #000; }
-        .btn-imprimir { background-color: #722F37; }
-        .btn-salir { background-color: #333333; }
 
-        .galeria {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
+        .mi-boton:hover {
+            background-color: #50C878;
+            color: black;
         }
     </style>
 </head>
 <body>
 
-    <h1 class="titulo-principal">Práctica Web HTML - 10%</h1>
+    <h1>Mi Practica de HTML</h1>
 
-    <hr class="separador">
+    <hr>
 
-    <h2>1. Tabla de Datos</h2>
     <table>
         <tr>
-            <th>Actividad</th>
-            <th>Descripción</th>
-            <th>Puntaje</th>
+            <th>Parte de la tarea</th>
+            <th>Puntos</th>
         </tr>
         <tr>
-            <td>Estructura y Título</td>
-            <td>Creación del esqueleto HTML y estilos del título</td>
-            <td>2%</td>
+            <td>Hacer el titulo y la tabla</td>
+            <td>3%</td>
         </tr>
         <tr>
-            <td>Formulario y Botones</td>
-            <td>Implementación de inputs y acciones</td>
+            <td>Formulario y los botones</td>
             <td>4%</td>
         </tr>
         <tr>
-            <td>Galería y Animaciones</td>
-            <td>Imágenes con sombras, bordes y transiciones</td>
-            <td>4%</td>
+            <td>Galeria de imagenes</td>
+            <td>3%</td>
         </tr>
     </table>
 
-    <hr class="separador-esmeralda">
+    <hr class="linea-verde">
 
-    <h2>2. Imagen Manipulada</h2>
-    <!-- Se actualizó el src a imagen_prueba.jpg -->
-    <img src="imagen_prueba.jpg" 
-         alt="Imagen de prueba" 
-         width="600" 
-         height="300" 
-         class="imagen-estilizada">
+    <center>
+        <img src="imagen_prueba.jpg" width="450" height="250" class="animacion-imagen">
+    </center>
 
-    <hr class="separador">
+    <hr>
 
-    <h2>3. Formulario de Registro</h2>
-    <div class="formulario-contenedor">
+    <div class="mi-formulario">
         <form>
-            <div class="grupo-form">
-                <label for="codigo">Código:</label>
-                <input type="text" id="codigo" name="codigo" placeholder="Ej: 001">
-            </div>
-            <div class="grupo-form">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
-            </div>
-            <div class="grupo-form">
-                <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" placeholder="Tu dirección">
-            </div>
-            <div class="grupo-form">
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
-            </div>
-            <div class="grupo-form">
-                <label for="contrasena">Contraseña:</label>
-                <input type="password" id="contrasena" name="contrasena" placeholder="********">
-            </div>
+            <label>Codigo:</label><br>
+            <input type="text"><br>
+            
+            <label>Nombre:</label><br>
+            <input type="text"><br>
+            
+            <label>Direccion:</label><br>
+            <input type="text"><br>
+            
+            <label>Correo:</label><br>
+            <input type="email"><br>
+            
+            <label>Contraseña:</label><br>
+            <input type="password"><br><br>
 
-            <div class="contenedor-botones">
-                <button type="button" class="btn btn-guardar">Guardar</button>
-                <button type="button" class="btn btn-imprimir" onclick="window.print()">Imprimir</button>
-                <button type="button" class="btn btn-salir" onclick="window.close()">Salir</button>
-            </div>
+            <button type="button" class="mi-boton">Guardar</button>
+            <button type="button" class="mi-boton" onclick="window.print()">Imprimir</button>
+            <button type="button" class="mi-boton" onclick="window.close()">Salir</button>
         </form>
     </div>
 
-    <hr class="separador-esmeralda">
+    <hr class="linea-verde">
 
-    <h2>4. Galería de Imágenes</h2>
-    <!-- Se actualizaron los src de las imágenes de la galería -->
-    <div class="galeria">
-        <img src="imagen1.jpg" width="300" height="200" class="imagen-estilizada" alt="Galería 1">
-        <img src="imagen2.jpg" width="300" height="200" class="imagen-estilizada" alt="Galería 2">
-        <img src="imagen3.jpg" width="300" height="200" class="imagen-estilizada" alt="Galería 3">
-    </div>
+    <center>
+        <img src="imagen1.jpg" width="220" height="150" class="animacion-imagen">
+        <img src="imagen2.jpg" width="220" height="150" class="animacion-imagen">
+        <img src="imagen3.jpg" width="220" height="150" class="animacion-imagen">
+    </center>
 
 </body>
 </html>
